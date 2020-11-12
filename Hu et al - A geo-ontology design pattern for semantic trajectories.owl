@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/geo-ontology_design_pattern.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/geo-ontology_design_pattern.owl">
+    <Prefix name="" IRI="http://www.semanticweb.org/geo-ontology_design_pattern"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl-time" IRI="https://www.w3.org/TR/owl-time/#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal xml:lang="en">Hu, Y., Janowicz, K., Carral, D., Scheider, S., Kuhn, W., Berg-Cross, G., Hitzler, P., Dean, M., &amp; Kolas, D. (2013). A Geo-Ontology Design Pattern for Semantic Trajectories. Lecture Notes in Computer Science, 8116, 438-456</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en">An ontology for semantic trajectories</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndingFix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FIx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovingObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Point-of-Interest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Segment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticTrajectory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Source"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StartingFix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stop"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl-time:TemporalEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#atTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#endsAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCreator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSegment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpatialFootprint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTraversedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#startsFrom"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#EndingFix"/>
+        <Class IRI="#FIx"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartingFix"/>
+        <Class IRI="#FIx"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stop"/>
+        <Class IRI="#FIx"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#atTime"/>
+        <Class IRI="#FIx"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#endsAt"/>
+        <Class IRI="#Segment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <Class IRI="#FIx"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <Class IRI="#Segment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCreator"/>
+        <Class IRI="#FIx"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFix"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="#FIx"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSegment"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSpatialFootprint"/>
+        <Class IRI="#Point-of-Interest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTraversedBy"/>
+        <Class IRI="#Segment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#startsFrom"/>
+        <Class IRI="#Segment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#atTime"/>
+        <Class abbreviatedIRI="owl-time:TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#endsAt"/>
+        <Class IRI="#FIx"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <Class IRI="#Attribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCreator"/>
+        <Class IRI="#Source"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFix"/>
+        <Class IRI="#FIx"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="#Position"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSegment"/>
+        <Class IRI="#Segment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSpatialFootprint"/>
+        <Class IRI="#Position"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTraversedBy"/>
+        <Class IRI="#MovingObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#startsFrom"/>
+        <Class IRI="#FIx"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Attribute</IRI>
+        <Literal xml:lang="en">A generic class and relation to connect fixes and segments to their attribute values, such as the speed at a particular fix or the bearing of a segment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EndingFix</IRI>
+        <Literal xml:lang="en">The fix has the latest timestamp, the end of a trajectory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FIx</IRI>
+        <Literal xml:lang="en">A fix is defined as a spatiotemporal point fxi,yi,tig indicating the position of a moving object at an instant of time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Point-of-Interest</IRI>
+        <Literal xml:lang="en">A POI can be any geographic feature that the user is interested in (e.g., a gas station or a tourist attraction)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Position</IRI>
+        <Literal xml:lang="en">A position is defined as a coordinate tuple (xi,yi)  in a 2D place or (x,y,z) in 3D space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Segment</IRI>
+        <Literal xml:lang="en">A segment is defined by a starting fix and an ending fix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticTrajectory</IRI>
+        <Literal xml:lang="en">A semantic trajectory conveys fixes, segments, and related knowledge into a meaningful path connecting the origin and destination</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Source</IRI>
+        <Literal xml:lang="en">The device or the subject which has collected the trajectory data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StartingFix</IRI>
+        <Literal xml:lang="en">The fix has the eariiest timestamp, the start of a trajectory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Stop</IRI>
+        <Literal xml:lang="en">A stop is a segment whose ;ength (the Euclidean distance) between the startsFrom fix and the endsAt fix) is shorter than a threshold defined by the user, and the time difference between the startsFrom fix and the endsAt fix indicates the duration of the stop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isTraversedBy</IRI>
+        <Literal>It can be used as a hook for the integration of domain knowledge about the moving object</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

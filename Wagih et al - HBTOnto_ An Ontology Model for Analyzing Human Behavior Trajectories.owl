@@ -1,0 +1,531 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/HBTOnto.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/HBTOnto.owl">
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="hbtonto" IRI="http://www.semanticweb.org/HBTOnto.owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal>H. M. Wagih and H. M. O. Mokhtar, “HBTOnto: An Ontology Model for Analyzing Human Behavior Trajectories,” in 2015 11th International Conference on Semantics, Knowledge and Grids (SKG), Aug. 2015, pp. 126–132, doi: 10.1109/SKG.2015.37.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>An Ontology Model for Analyzing Human Behavior Trajectories</Literal>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Behaviour
+Trajectory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndingFix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#startsFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Segment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Moving
+Segment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVelocity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#traverse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ending
+Segment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#EndsAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSegment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StartingFix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PointOf
+Interest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#passesBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#traversedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tranportation
+Activity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#atTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Starting
+Segment"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#EndingFix"/>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facility"/>
+        <Class IRI="#PointOf
+Interest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fix"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasLocation"/>
+            <Class IRI="#Position"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fix"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#atTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fix"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasSpeed"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#traverse"/>
+            <Class IRI="#Behaviour
+Trajectory"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Segment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#EndsAt"/>
+            <Class IRI="#Fix"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Segment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#startsFrom"/>
+            <Class IRI="#Fix"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Segment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#traversedBy"/>
+            <Class IRI="#Tranportation
+Activity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Segment"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasVelocity"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartingFix"/>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stop"/>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Behaviour
+Trajectory"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasSegment"/>
+            <Class IRI="#Segment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Behaviour
+Trajectory"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#passesBy"/>
+            <Class IRI="#PointOf
+Interest"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ending
+Segment"/>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moving
+Segment"/>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PointOf
+Interest"/>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PointOf
+Interest"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasDuration"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Starting
+Segment"/>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#EndsAt"/>
+            <Class IRI="#Fix"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasLocation"/>
+            <Class IRI="#Position"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasSegment"/>
+            <Class IRI="#Segment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#passesBy"/>
+            <Class IRI="#PointOf
+Interest"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#startsFrom"/>
+            <Class IRI="#Fix"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#traverse"/>
+            <Class IRI="#Behaviour
+Trajectory"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#traversedBy"/>
+            <Class IRI="#Tranportation
+Activity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#atTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasDuration"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasSpeed"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasVelocity"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#EndsAt"/>
+            <Class IRI="#Fix"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#EndsAt"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasLocation"/>
+            <Class IRI="#Position"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasLocation"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSegment"/>
+            <Class IRI="#Segment"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Behaviour
+Trajectory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSegment"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Behaviour
+Trajectory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#passesBy"/>
+            <Class IRI="#PointOf
+Interest"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Behaviour
+Trajectory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#passesBy"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Behaviour
+Trajectory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#startsFrom"/>
+            <Class IRI="#Fix"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#startsFrom"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#traverse"/>
+            <Class IRI="#Behaviour
+Trajectory"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#traverse"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#traversedBy"/>
+            <Class IRI="#Tranportation
+Activity"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#traversedBy"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#atTime"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#atTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDuration"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+        <Class IRI="#PointOf
+Interest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDuration"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+        <Class IRI="#PointOf
+Interest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSpeed"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSpeed"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+        <Class IRI="#Fix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVelocity"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVelocity"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+        <Class IRI="#Segment"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EndingFix</IRI>
+        <Literal>The ending spatiotemporal point of a trajectory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fix</IRI>
+        <Literal>A Fix is represented by a triplet (x,y,t) where x,y are the 2D space dimensions , and t is the time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Segment</IRI>
+        <Literal>A SEGMENT is a pair of Fixes (F1, F2)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StartingFix</IRI>
+        <Literal>The starting spatio-temporal point of a trajectory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Behaviour
+Trajectory</IRI>
+        <Literal>BEHAVIORTRAJECTORY is a special type of trajectories that is enhanced with both semantic annotations and an extra time duration parameter added to the Point Of Interest to define a certain behavioral activity.
+
+ Behavior Trajectory is continuous sequence of segments that starts with a STARTINGSEG followed by zero or more MOVSEG and ends by an ENDINGSEG.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ending
+Segment</IRI>
+        <Literal>A SEGMENT (F1,F2)  where  F1 is a STOP FIX and F2 is a ENDING</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Moving
+Segment</IRI>
+        <Literal>A SEGMENT (F1,F2)  where both F1 and F2 are STOP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PointOf
+Interest</IRI>
+        <Literal>A POI is a FIX, where the Behavior Trajectory comes to rest (Speed=0)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Starting
+Segment</IRI>
+        <Literal>A segment (F1, F2) where F1 is a STARTINGFIX and F2 is a STOP</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

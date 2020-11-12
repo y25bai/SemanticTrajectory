@@ -1,0 +1,539 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/CONSTAnT"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/CONSTAnT">
+    <Prefix name="" IRI="http://www.semanticweb.org/CONSTAnT"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal>V. Bogorny, C. Renso, A. R. de Aquino, F. de L. Siqueira, and L. O. Alvares, “CONSTAnT – A Conceptual Data Model for Semantic Trajectories of Moving Objects,” Transactions in GIS, vol. 18, no. 1, pp. 66–88, 2014, doi: https://doi.org/10.1111/tgis.12011.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>CONSTAnT - A conceptual data model for semantic trajectories</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AwareBehavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Behavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CollectiveBehavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-awareBehavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticSubtrajectory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticTrajectory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SingleBehavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TimeInterval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransportationMeans"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#composedOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#form"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#formedOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#generates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#goalOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBehavior"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGoal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMainGoal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTimeInterval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTrajectory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTransportationMeans"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occursOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relatesTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAccelaration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasActivity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDeviceName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDeviceType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEnvironmentName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEnvironmentType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEnvironmentValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEventName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEventType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGoalName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasObjectName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasObjectType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPlaceName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPrecision"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSamplingRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpeed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTImestamp"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AwareBehavior"/>
+        <Class IRI="#CollectiveBehavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CollectiveBehavior"/>
+        <Class IRI="#Behavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non-awareBehavior"/>
+        <Class IRI="#CollectiveBehavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticSubtrajectory"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SingleBehavior"/>
+        <Class IRI="#Behavior"/>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#form"/>
+        <ObjectProperty IRI="#formedOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#goalOf"/>
+        <ObjectProperty IRI="#hasGoal"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongs"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#composedOf"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#form"/>
+        <Class IRI="#SemanticPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#formedOf"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#generates"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#goalOf"/>
+        <Class IRI="#Goal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBehavior"/>
+        <Class IRI="#SemanticSubtrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#SemanticPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGoal"/>
+        <Class IRI="#SemanticSubtrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMainGoal"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTimeInterval"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTimeInterval"/>
+        <Class IRI="#SemanticSubtrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTrajectory"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTransportationMeans"/>
+        <Class IRI="#SemanticSubtrajectory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAt"/>
+        <Class IRI="#SemanticPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occursOn"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#relatesTo"/>
+        <Class IRI="#SemanticPoint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongs"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#composedOf"/>
+        <Class IRI="#SemanticSubtrajectory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#form"/>
+        <Class IRI="#SemanticSubtrajectory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#formedOf"/>
+        <Class IRI="#SemanticPoint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#generates"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#goalOf"/>
+        <Class IRI="#SemanticSubtrajectory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBehavior"/>
+        <Class IRI="#Behavior"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGoal"/>
+        <Class IRI="#Goal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMainGoal"/>
+        <Class IRI="#Goal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTimeInterval"/>
+        <Class IRI="#TimeInterval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTrajectory"/>
+        <Class IRI="#SemanticTrajectory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTransportationMeans"/>
+        <Class IRI="#TransportationMeans"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAt"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occursOn"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#relatesTo"/>
+        <Class IRI="#Environment"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAccelaration"/>
+        <Class IRI="#SemanticPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasActivity"/>
+        <Class IRI="#Goal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDeviceName"/>
+        <Class IRI="#Device"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDeviceType"/>
+        <Class IRI="#Device"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEnvironmentName"/>
+        <Class IRI="#Environment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEnvironmentType"/>
+        <Class IRI="#Environment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEnvironmentValue"/>
+        <Class IRI="#Environment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEventName"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEventType"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGoalName"/>
+        <Class IRI="#Goal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasObjectName"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPlaceName"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPrecision"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSamplingRate"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSpeed"/>
+        <Class IRI="#SemanticPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTImestamp"/>
+        <Class IRI="#SemanticPoint"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAccelaration"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasActivity"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDeviceName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDeviceType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEnvironmentName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEnvironmentType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEnvironmentValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEventName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEventType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGoalName"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasObjectName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPlaceName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPrecision"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSamplingRate"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSpeed"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTImestamp"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwareBehavior</IRI>
+        <Literal>At least one moving object is aware of other moving objects, and changes its movement based on the movement of the other. In other words, the behavior of a trajectory is affected by other trajectories, and the collective movement is not a
+coincidence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Behavior</IRI>
+        <Literal>A trajectory behavior has a set of characteristics that identifies a peculiar bearing of a moving object or a set of moving objects. The behavior can show how and why an object is moving, adding semantics to the movement.
+The behavior of a trajectory or a group of trajectories, in general, has to be computed with intelligent methods, like data mining algorithms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CollectiveBehavior</IRI>
+        <Literal>Collective behavior is a pattern that holds for a group of trajectories, which can be either of the same object or different objects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Environment</IRI>
+        <Literal xml:lang="en">The environment describes the physical context where the point is collected, e.g. templerature, wind speed, etc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Event</IRI>
+        <Literal>An event e is a tuple (l, name, type, startTime, endTime), where l is a place, name is the name of the event, type is the kind of event, startTime is the starting time and endTime is the ending time of the event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Goal</IRI>
+        <Literal>The goal is the objective of the movement and can be relative to the entire trajectory or  semantic subtrajectory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Non-awareBehavior</IRI>
+        <Literal>The non-aware behavior occurs when a group of trajectories has similar behavior by coincidence or without the intention to stay with the other trajectories</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Object</IRI>
+        <Literal xml:lang="en">The object O is the moving object that carries the mobile device and has a name, a type and an identifier oid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticPoint</IRI>
+        <Literal>A semantic point must be related to emvironment information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticSubtrajectory</IRI>
+        <Literal>A semantic subtrajectory has a set of points located in space and time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticTrajectory</IRI>
+        <Literal>Trajectories will be semantic trajectories only if they are associated to a goal and have at least one semantic subtrajectory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDeviceType</IRI>
+        <Literal xml:lang="en">Device type, e.g. GPS</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
